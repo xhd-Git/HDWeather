@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_change_city"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Change City" />
+        <item
+            android:id="@+id/nav_change_bg"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Change BgImg" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="MyCitys">
+        <menu>
+            <item
+                android:id="@+id/nav_ctymain"
+                android:title="天津" />
+            <item
+                android:id="@+id/nav_ctyanother"
+                android:title="牡丹江" />
+        </menu>
+    </item>
+
+</menu>

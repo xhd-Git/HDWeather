@@ -36,54 +36,6 @@ public class HttpUtils {
 
     OkHttpClient client = new OkHttpClient();
 
-//    public String getWeatherInfo() {
-//        ByteArrayOutputStream baos = null;
-//        String result = null;
-//        BufferedReader reader = null;
-//        StringBuffer sbf = new StringBuffer();
-//
-//        java.net.URL url = null;
-//        try {
-//            url = new URL(address);
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        try {
-//            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-//            conn.setRequestMethod("GET");
-//            conn.setConnectTimeout(3000);
-//            conn.setReadTimeout(3000);
-//
-//            if (conn.getResponseCode() == 200) {
-//                InputStream inputStream = conn.getInputStream();
-//                reader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
-//                String strRead = null;
-//                while ((strRead = reader.readLine()) != null) {
-//                    sbf.append(strRead);
-//                    sbf.append("\r\n");
-//                }
-//                sbf.deleteCharAt(11);
-//                sbf.deleteCharAt(15);
-//                sbf.delete(22, 26);
-//                result = sbf.toString();
-//
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } finally {
-//
-//            if (reader != null) {
-//                try {
-//                    reader.close();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-//        return result;
-//    }
-
 
     public String getWeatherInfo(String cityId) throws IOException {
 
@@ -113,7 +65,7 @@ public class HttpUtils {
         String city;
         if (response.isSuccessful()) {
             city = response.body().string();
-            Log.d("ssssss", "getCityInfo: " + city);
+
         } else {
             throw new IOException("Unexcepted Code" + response);
         }
